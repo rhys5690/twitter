@@ -40,14 +40,14 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/profile">Profile</a>
+                            <a href="/user/<%= current_user.username %>">Profile</a>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li>
                             <a href="#">Help</a>
                         </li>
                         <li role="separator" class="divider"></li>
-                        <li> <%= link_to('Edit Profile', edit_user_registration_path) %></li>
+                        <li> <%= link_to('Settings', edit_user_registration_path) %></li>
                         <li role="separator" class="divider"></li>
                         <li> <%= link_to('Log Out', destroy_user_session_path, :method => :delete) %></li> <!--custom code for devise gem to log out -->
                     </ul>
