@@ -3,6 +3,8 @@ class PagesController < ApplicationController
   end
 
   def home
+
+  @tweets = Tweet.all
   end
 
   def profile
@@ -12,8 +14,11 @@ class PagesController < ApplicationController
   else
     redirect_to root_path, :notice=> "User not found"
     end
+  @tweets = Tweet.all.where("user_id = ?", User.find_by_username(params[:id]).id)
   end
 
+
   def explore
+  @tweets = Tweet.all
   end
 end

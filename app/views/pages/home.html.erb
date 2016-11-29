@@ -5,30 +5,27 @@
                 <p>Stats</p>
             </div>
         </div>
-    </div>
-
-    <div class="col-xs-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <p>Feed</p>
+                <p>Trends</p>
             </div>
         </div>
     </div>
+
+    <div class="col-xs-6">
+          <% for @t in @tweets %>
+          <div class="panel panel-default">
+              <div class="panel-body">
+                  <p><%= @t.content %></p>
+              </div>
+          </div>
+          <% end %>
+      </div>
 
     <div class="col-xs-3">
         <div class="panel panel-default">
             <div class="panel-body">
                 <p>About</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-xs-3">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <p>Trends</p>
             </div>
         </div>
     </div>
