@@ -1,0 +1,13 @@
+<center>
+<%= form_for(@newTweet) do |f| %>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add Post" %>
+  </div>
+<% end %>
+</center>

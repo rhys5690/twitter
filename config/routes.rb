@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :views
   devise_for :users
+  resources :tweets 
+
   root 'pages#home'
   get '/home' => 'pages#home'
   get '/user/:id' => 'pages#profile'
