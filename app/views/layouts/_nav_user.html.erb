@@ -8,20 +8,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Fitter</a>
-        </div>
 
+        </div>
+    <img class="navbar-brand" src="/legal_hammer.png">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="/">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/explore">Explore</a>
-                </li>
+                <li><a href="/">Home</a></li>
+                <!-- <li><a href="/">Home</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Home</a></li> -->
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -50,9 +46,7 @@
                         <li role="separator" class="divider"></li>
                         <li> <%= link_to('Log Out', destroy_user_session_path, :method => :delete) %></li> <!--custom code for devise gem to log out -->
                     </ul>
-                    <li>
-                        <a href="#">Tweet</a>
-                    </li>
+                    <li type="button" class="btn btn-primary navbar-btn">Tweet</li>
                 </li>
             </ul>
         </div>
