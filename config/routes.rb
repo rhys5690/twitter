@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :views
   devise_for :users
-  resources :tweets 
+  resources :tweets
 
-  root 'pages#home'
+  root 'pages#index'
   get '/home' => 'pages#home'
   get '/user/:id' => 'pages#profile'
   get '/explore' => 'pages#explore'

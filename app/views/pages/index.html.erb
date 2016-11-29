@@ -1,2 +1,47 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? %>
+<style>
+body {
+  background: linear-gradient(
+rgba(0, 0, 0, 0.7),
+rgba(0, 0, 0, 0.7)
+), url("/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+}
+
+h3 {
+  color: white;
+  font-weight: bold;
+}
+
+.container-index {
+  margin-left: 15%;
+  margin-right: 15%;
+  color: white;
+}
+
+.text {
+  color: white;
+  font-weight: heavy;
+  font-size: 150%;
+}
+
+</style>
+<div class="container-index">
+  <h1>Welcome To Q&L </h1>
+  <h3>Question and Lawyer </h3>
+
+<p class="text">
+  Get an answer to your legal problem in 4 lines or less!
+</p>
+</div>
+<% else %>
+
+<% end %>
