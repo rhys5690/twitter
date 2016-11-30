@@ -28,3 +28,21 @@ body {
   position: absolute;
   left: 50%;
 }
+
+.post-panel {
+  margin: -21px;
+}
+
+.post-content {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.post-owner {
+  color: black;
+  font-weight: bold;
+}
+
+.post-creation {
+  opacity: 0.65;
+}

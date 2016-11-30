@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   def home
 
   @tweets = Tweet.all
+  @newTweet = Tweet.new
   end
 
   def profile
