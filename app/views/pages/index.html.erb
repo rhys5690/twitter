@@ -59,11 +59,34 @@ h3 {
 
 <div class="col-sm-6">
   <div class="log-in panel">
-  
+    <!-- <%= form_for(:user, :url => session_path(:user)) do |f| %>
+    <%= f.text_field :email %>
+    <%= f.password_field :password %>
+    <%= f.check_box :remember_me %>
+    <%= f.label :remember_me %>
+    <%= f.submit 'Sign in' %>
+    <%= link_to "Forgot your password?", new_password_path(:user) %>
+    <% end %> -->
   </div>
 
   <div class="sign-up panel">
-    <h2>Sign up</h2>
+    <!-- <h2>Sign up</h2>
+    <%= f.label :username %><br />
+   <%= f.text_field :username, autofocus: true %>
+
+   <%= f.label :email %><br />
+   <%= f.email_field :email %>
+
+  <%= f.label :password %>
+  <% if @minimum_password_length %>
+  <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <% end %><br />
+  <%= f.password_field :password, autocomplete: "off" %>
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+
+  <%= f.submit "Sign up" %> -->
+
 
   </div>
 </div>
@@ -71,5 +94,7 @@ h3 {
 </div>
 
 <% else %>
+
+<script> document.location = "/home" </script>
 
 <% end %>
