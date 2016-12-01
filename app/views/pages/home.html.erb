@@ -26,13 +26,15 @@
                       <p><span class="post-content"><%= @t.content %></p></span>
                   </div>
               </div>
+              <% @t.comments.each do |comment| %>
+
+                <p> <%= comment.content %> </p>
+
+              <% end %>
+              <%= render 'components/post_form_comments', :locals => {tweet: @t} %>
           </div>
 
-          <% @t.comments.each do |comment| %>
 
-            <!-- <p> <%= comment.content %> </p> -->
-
-          <% end %>
       <% end %>
     </div>
 

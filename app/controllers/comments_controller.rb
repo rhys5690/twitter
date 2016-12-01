@@ -1,14 +1,21 @@
 class CommentsController < ApplicationController
 
-def create
-  @tweet = Tweet.new(tweet_params)
-  @tweet.user_id = current_user.id
-  respond_to do |f|
-    if (@tweet.save)
-      f.html { redirect_to "", notice: "You created a tweet ;)"}
+  def create
+    @comment = Comment.new(comment_params)
+    @comment.user_id = current_user.id
+    @comment.tweet_id = params[:tweet_id]
+    if @comment.save
+      redirect_to "", notice: "You created a comment ;)"
     else
-      f.html { redirect_to "", notice: "Post not saved. Might be a bug!"}
+      redirect_to "", notice: "comment not saved. Might be a bug!"
     end
+
   end
-  
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:content)
+  end
+
 end
