@@ -1,8 +1,14 @@
+<center>
+<h1> Q&L </h1>
+
+<h5>Where A Lawyer Will Answer Your Legal Question In 4 lines or Less!</h5>
+</center> <br>
+
 <div class="row">
     <div class="col-xs-3">
-        <div class="panel panel-default">
+        <div class="panel panel-default find-a-lawyer">
             <div class="panel-body">
-                <p>Find A Lawyer</p>
+                <p class="find-a-lawyer">Find A Lawyer</p>
             </div>
         </div>
         <div class="panel panel-default">
@@ -18,25 +24,40 @@
                   <div class="col-sm-1">
                       <img src="legal_hammer.png" height="50px" width="50px">
                   </div>
-
                   <div class="col-sm-11">
                       <p><span class="post-owner"><%= User.find(@t.user_id).username %></span> - <span class="post-creation"> <%= @t.created_at.to_formatted_s(:short) %></p></span>
+                      <div class="panel panel-default the-content">
+                          <div class="panel-body">
                       <p><span class="post-content"><%= @t.content %></p></span>
+                  </div>
+
+                      </div>
                   </div>
               </div>
 
-              <% @t.comments.each do |comment| %>
 
-                <p> <%= comment.content %> </p>
+
+</div>
+        <div class="the-comment">
+              <% @t.comments.each do |comment| %>
+            <div class="panel panel-default the-comment">
+                <div class="panel-body">
+
+                    <p> <%= comment.content %> </p>
+                </div>
+            </div>
+
 
               <% end %>
-              <%= render 'components/post_form_comments', :locals => {tweet: @t} %>
-        
-          </div>
+        </div>
 
 
+
+
+
+      <%= render 'components/post_form_comments', :locals => {tweet: @t} %>
       <% end %>
-    </div>
+
 
     <div class="col-xs-3">
         <div class="panel panel-default">

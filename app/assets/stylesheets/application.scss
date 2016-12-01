@@ -16,8 +16,25 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-body {
-  background-color: #E6E6EA
+  body {
+    background: linear-gradient(
+  rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.7)
+  ), url("/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+}
+
+h5 {
+  color: white;
+  font-weight: bold;
 }
 
 .navbar {
@@ -46,4 +63,33 @@ body {
 
 .post-creation {
   opacity: 0.65;
+}
+
+.the-content {
+  margin-left: 20px;
+}
+
+.post-panel {
+  background-color: ghostwhite;
+}
+
+.find-a-lawyer {
+  height: 500px;
+  background: linear-gradient(
+rgba(0, 0, 0, 0),
+rgba(0, 0, 0, 0)
+), url("/background_image.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p.find-a-lawyer {
+  color: blue;
+  font-weight: bold;
+}
+
+.the-comment {
+  margin-left: 50px;
 }

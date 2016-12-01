@@ -25,6 +25,7 @@ h3 {
   margin-left: 15%;
   margin-right: 15%;
   color: white;
+  display: block;
 }
 
 .text {
@@ -38,17 +39,23 @@ h3 {
   width: 200px;
   height: 150px;
   margin-top: 7.5%;
+  display: block;
 }
 
 .sign-up {
   float: right;
   width: 200px;
   height: 300px;
+  display: block;
 }
 
 .sign-up {
   color: black;
   margin-left: -100px;
+}
+
+.sign-in-up {
+  margin-left: 175px;
 }
 
 
@@ -64,6 +71,8 @@ h3 {
   </div>
 
 <div class="col-sm-6">
+
+  <h5 class="sign-in-up">Sign In</h5>
   <div class="log-in panel">
 
     <%= form_for(:user, :url => session_path(:user)) do |f| %>
@@ -76,7 +85,12 @@ h3 {
     <% end %>
 
   </div>
+</div>
 
+<div class="col-sm-6"></div>
+
+<div class="col-sm-6">
+  <h5 class="sign-in-up">Sign Up</h5>
   <div class="sign-up panel">
     <%= render :partial => 'devise/registrations/new_registration' %>
   </div>
