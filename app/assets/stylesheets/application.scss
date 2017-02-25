@@ -27,6 +27,38 @@
     background-size: cover;
 }
 
+.log-in {
+  border: solid 1px blue;
+  padding: 12px;
+}
+
+.sign-up {
+  border: solid 1px blue;
+  padding: 12px;
+  height: 400px;
+}
+
+.sign-up-container {
+  height: 360px;
+}
+
+.sign-in-button {
+
+text-align: center;
+margin-right: 10rem;
+margin-left: 1rem;
+}
+
+.sign-up-button {
+  margin-top: 1rem;
+  text-align: center;
+  margin-right: 10rem;
+}
+
+input {
+  color: black;
+}
+
 h1 {
   color: white;
   font-weight: bold;
